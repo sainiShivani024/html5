@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2><br>
+        <form action="">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control"  id="firstName" required="required" placeholder="Enter First Name" name="first name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="last name">
+              </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email"  placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone No.:</label>
+            <input  class="form-control" id="phone"  placeholder="Enter your Number" name="number">
+          </div>
+          <div class="form-group">
+            <label for="query">Your Query here:</label>
+           <textarea id="query" rows="4" cols="160"></textarea>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+          <button type="submit" id="btnSubmit" class="btn btn-primary" onclick="formDetails()">Submit</button>
+        </form>
+      </div>
+      
+      <script>
+    
+          function formDetails() {
+                let fName=document.getElementById("firstName").value;
+                let lName= document.getElementById("lastName").value;
+                let email=document.getElementById("email").value;
+                let phn=document.getElementById("phone").value;
+                let query=document.getElementById("query").value;
+                if(fName==""){
+                    alert("First Name Required");
+                }
+                else if(lName==""){
+                    alert("Last Name reuired");
+                }
+                else if(email==""){
+                    alert("Email Required");
+                }
+                else if(phn==""){
+                    alert("Phone no is Required");
+                }
+                else if(query==""){
+                    alert("Please enter your query");
+                }
+                else{
+                    alert(`Hii ${fName} ${lName}\n Your Query has been submitted`);
+                }
+            
+  }
+      </script>
+</body>
+</html>
